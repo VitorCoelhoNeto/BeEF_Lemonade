@@ -9,6 +9,8 @@ custom-config.yaml
 .rvmrc
 beef.log
 
+# Config.yaml
+config.yaml
 
 extensions/metasploit/msf-exploits.cache
 
